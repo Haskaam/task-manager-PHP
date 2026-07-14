@@ -1,0 +1,343 @@
+* {
+    font-family: 'Inter', sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+
+    background: linear-gradient(
+        135deg,
+        #00E5FF 0%,
+        #007CFF 35%,
+        #7C3AED 70%,
+        #400082 100%
+    );
+
+    color: white;
+}
+
+header {
+    height: 80px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 0 40px;
+
+    background: rgba(10, 10, 30, 0.4);
+
+    backdrop-filter: blur(10px);
+
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.nav {
+    text-align: right;
+}
+
+.content {
+    display: flex;
+    flex: 1;
+}
+
+aside {
+    display: flex;
+    flex-direction: column;
+
+    flex: 1;
+    border: 1px solid black;
+
+    background: linear-gradient(
+        135deg, 
+        #1c283d 0%,
+        #243B55 100%
+    );
+}
+
+main {
+
+    flex: 4;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+
+    overflow: auto;
+
+    background: linear-gradient(
+        135deg, 
+        #1c283d 0%,
+        #243B55 100%
+    );
+}
+
+.task {
+    border: 1px solid black;
+    border-radius: 15px;
+
+    width: 80%;
+
+    display:flex;
+    flex-direction: column;
+
+    text-align: center;
+
+    box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+}
+
+.add_task {
+    border: 1px solid black;
+    border-radius: 15px;
+
+    min-height: 250px;
+    width: 50%;
+    margin-top: 7px;
+
+    text-align: center;
+
+    box-shadow: 5px 5px 5px rgb(36, 33, 33);
+}
+
+.add_task #nazwa_input {
+    width: 50%;
+
+    box-sizing: border-box;
+
+    padding: 10px;
+
+    border-radius: 8px;
+
+    border: 1px solid rgba(255, 255, 255, 0.1);
+
+    background: #1E293B;
+
+    color: white;
+
+    outline: none;
+
+    margin: 5px;
+}
+
+.add_task #nazwa_input:focus {
+    border: 1px solid #00E5FF;
+
+    box-shadow: 0 0 10px #00E5FF;
+}
+
+.add_task input::placeholder,
+.add_task textarea::placeholder {
+    color: #94A3B8;
+}
+
+.add_task textarea {
+    width: 50%;
+
+    box-sizing: border-box;
+
+    padding: 10px;
+
+    border-radius: 8px;
+
+    border: 1px solid rgba(255, 255, 255, 0.1);
+
+    background: #1E293B;
+
+    color: white;
+
+    outline: none;
+
+    margin: 5px;
+
+    resize: none;
+}
+
+.add_task textarea:focus {
+    border: 1px solid #00E5FF;
+
+    box-shadow: 0 0 10px #00E5FF;
+}
+
+.add_task button {
+    width: 25%;
+
+    box-sizing: border-box;
+
+    padding: 14px;
+
+    margin-top: 10px;
+
+    border: none;
+
+    border-radius: 12px;
+
+    font-weight: bold;
+
+    color: white;
+
+    cursor: pointer;
+
+    background: linear-gradient(
+        90deg, 
+        #22C55E,
+        #16A34A
+    );
+    transition: 0.3s;
+}
+
+.add_task button:hover {
+    transform: translateY(-2px);
+
+    box-shadow: 0 0 20px rgba(34, 197, 94, 0.5);
+}
+
+.delete {
+    align-self: flex-end;
+
+    margin-top: auto;
+
+    width: 80px;
+
+    padding: 14px;
+
+    border: none;
+    border-radius: 12px;
+
+    font-weight: bold;
+
+    color: white;
+
+    cursor: pointer;
+
+    background: linear-gradient(
+        90deg,
+        #e52d27,
+        #b31217
+    );
+
+    transition: 0.3s;
+}
+
+.delete:hover {
+    transform: translateY(-2px);
+
+    box-shadow: 0 0 20px rgba(255, 0, 13, 0.5);
+}
+
+.edit {
+    align-self: flex-end;
+
+    margin-top: auto;
+
+    width: 80px;
+
+    padding: 14px;
+
+    border: none;
+    border-radius: 12px;
+
+    font-weight: bold;
+
+    color: white;
+
+    cursor: pointer;
+
+    background: linear-gradient(
+        90deg,
+        #F7971E,
+        #FFD200
+    );
+
+    transition: 0.3s;
+}
+
+.edit:hover {
+    transform: translateY(-2px);
+
+    box-shadow: 0 0 20px rgba(255, 0, 13, 0.5);
+}
+
+.donebtn {
+    width: 80px;
+
+    box-sizing: border-box;
+
+    padding: 14px;
+
+    margin-top: 10px;
+
+    border: none;
+
+    border-radius: 12px;
+
+    font-weight: bold;
+
+    color: white;
+
+    cursor: pointer;
+
+    background: linear-gradient(
+        90deg, 
+        #22C55E,
+        #16A34A
+    );
+    transition: 0.3s;
+}
+
+.donebtn:hover {
+    transform: translateY(-2px);
+
+    box-shadow:  0 0 20px rgba(34, 197, 94, 0.5);
+}
+
+.done {
+    opacity: .7;
+}
+
+.done h3 {
+    text-decoration: line-through;
+    color: #22C55E;
+}
+
+.logout {
+    align-self:center;
+    color: rgb(240, 50, 50);
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+    text-decoration: none;
+    margin-top: auto;
+}
+
+.logout:hover {
+    text-decoration: underline;
+}
+
+.status {
+    color: rgb(8, 150, 206);
+}
+
+footer {
+    min-height: 80px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 0 40px;
+
+    background: rgba(10, 10, 30, 0.4);
+
+    backdrop-filter: blur(10px);
+
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+
+    padding: 0 40px;
+}
+
